@@ -1,0 +1,24 @@
+main{
+
+    height: 590px;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url(./../../../assets/img/portada1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+h2{
+
+    font-size: 30px;
+    color: #fff;
+}
+h3 {
+    font-size: 30px;
+    color: #fff; 
+}
