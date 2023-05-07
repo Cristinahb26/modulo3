@@ -1,0 +1,184 @@
+main{
+
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/06/Magnificent-Book-Wallpaper-768x480.jpg') ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 590px;
+    width: 1478px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section{
+
+    height: 570px;
+    width: 1000px;
+    background-color: rgba(36, 37, 37, 0.8);
+    border: 2px solid rgb(209, 206, 206);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+article{
+
+    height: 566px;
+    width: 500px;
+    /* background-color: blueviolet; */
+    margin-left: 10px;
+    border-right: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagen{
+
+    height: 250px;
+    width: 250px;
+    /* background-image: url(./../../../assets/img/presentacion.jpg); */
+    border-radius: 50%;
+    margin-top: 20px;
+
+}
+.imag{
+
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+
+}
+.titulo{
+
+    height: 80px;
+    width: 300px;
+    /* background-color: rgb(102, 176, 241); */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+img{
+
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 5px;
+
+}
+h3{
+    font-size:x-large;
+    color: #fff;
+}
+.formulario{
+
+    height: 200px;
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.datos{
+
+    height: 50px;
+    width: 400px;
+    margin-left: 50px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+.form-control{
+
+    height: 35px;
+    width: 350px;
+    border-radius: 5px;
+
+}
+label{
+
+    height: 35px;
+    width: 80px;
+    font-size: larger;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background-color: yellowgreen; */
+}
+aside{
+
+    height: 550px;
+    width: 500px;
+    /* background-color: rgb(215, 186, 243); */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.titulo1{
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 70px;
+    width: 50%;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+
+    font-size: 40px;
+
+}
+.lines-effect{
+    height: 5px;
+    width: 220px;
+    background-color: #fff;
+}
+.formulario1{
+
+    height: 200px;
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+p{
+
+    height: 40px;
+    width: 300px;
+    color: #fff;
+    margin-top: 15px;
+    background-color: rgba(36, 37, 37, 0.7);
+    border: 1px solid rgba(114, 117, 117, 1);
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-top: 4px;
+
+}
