@@ -1,0 +1,74 @@
+.tarjeta{
+
+    height: 550px;
+    width: 130px;
+    border: 2px solid rgb(215, 213, 213);
+    border-radius: 10px;
+    box-shadow: 2px 5px 3px rgb(152, 151, 151);
+    /* background-color: red; */
+
+    display: flex;
+    flex-direction: column;  
+    gap: 5px;
+
+}
+img{
+
+    height: 320px;
+    width: 285px;
+    border-radius: 8px;
+    
+}
+.card-body{
+
+    width: 280px;
+    /* background-color: yellow; */
+    padding-left: 6px;
+    margin-left: 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+
+}
+p{
+    background-color: rgb(237, 72, 17);
+    font-size: 14px;
+    height: 20px;
+    margin-bottom: 5px;
+    
+}
+.lines-effect{
+
+    height: 1px;
+    width: 260px;
+    margin-left: 6px;
+    margin-bottom: 2px;
+    background-color: black;
+
+}
+h4{
+
+    font-size: 17px;
+    height: 20px;
+   background-color: rgb(25, 247, 32);
+}
+h5{
+
+    font-size: 18px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+h6{
+
+    background-color:aquamarine;
+    font-size: 14px;
+    height: 20px;
+
+}
+a{
+
+    width: 250px;
+    margin-left: 15px;
+}
