@@ -1,0 +1,56 @@
+<main class="contenedor-tarjetas" *ngIf="books.length>0; else noHay">
+ 
+    <div class="tarjeta" style="width: 18rem;" *ngFor="let book of books; let even = even;">
+        <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
+         <div class="card-body">
+            <h6 class="card-text">{{book.type}}</h6>
+            <div class="lines-effect"></div>
+            <h5 class="card-title">{{book.title | uppercase}}</h5>
+            <p class="card-subtitle">AUTOR: {{book.author | uppercase}}</p>
+            <p>{{book.id_book | codigo}}</p>
+            <h4 class="Precio text-center">{{book.price}}€</h4>
+            <a href="#" class="btn" [ngClass]="even ? 'bg-success' : 'bg-secondary' ">Comprar</a>
+        </div>
+    </div>
+
+</main>
+
+<ng-template #noHay>
+    <div class="contenedor-tarjetas">
+        <h3>No se encontro el Libro</h3>
+    </div>
+</ng-template>
+
+<div class="formulario">
+
+    <form>
+
+            <div class="titulo">
+                <h2>Añadir Libro</h2>
+            </div>
+
+            <div class="formul">
+
+                <input type="text" class="form-control" id="title" placeholder="Titulo" #title>
+
+                <input type="text" class="form-control" id="type" placeholder="Tapa blanda/dura" #type>
+
+                <input type="text" class="form-control" id="author" placeholder="Autor" #author>
+
+                <input type="text" class="form-control" id="price" placeholder="Precio" #price>
+        
+                <input type="text" class="form-control" id="photo" placeholder="Photo" #photo>
+
+                <input type="text" class="form-control" id="id_book" placeholder="Codigo" #id_book>
+
+            </div>
+
+            <button type="reset" class="btn btn-success" (click)="agregarBook(id_book.value, title.value, type.value, author.value, price.value, photo.value)">Insertar Libro</button>
+
+    </form>
+</div>
+
+
+      
+      
+     

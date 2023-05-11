@@ -9,6 +9,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { BooksComponent } from './pages/books/books.component';
+import { CodigoPipe } from './pipes/codigo.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { ProfileComponent } from './pages/profile/profile.component';
     HomeComponent,
     FormRegisterComponent,
     RegisterComponent,
-    ProfileComponent
+    ProfileComponent,
+    BooksComponent,
+    CodigoPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
