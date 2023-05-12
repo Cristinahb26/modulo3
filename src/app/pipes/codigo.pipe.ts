@@ -8,7 +8,7 @@ export class CodigoPipe implements PipeTransform {
   transform(id_book: number): string {
 
     let codigo = id_book.toString().padStart(2, "0");
-    return `Ref- ${codigo}` ;
+    return `Ref- ${codigo}`;
   }
 
 }
