@@ -1,8 +1,6 @@
 <div class="tarjeta" style="width: 18rem;">
-    <div class="imagen">
         <img src="{{book.photo}}" class="card-img-top" alt="card imagen cap">
-        <button type="button" class="btn-close" aria-label="Close"></button>
-    </div>    
+        <button type="button" class="btn-close" aria-label="Close" (click)="enviarBook()"></button>    
      <div class="card-body">
         <h6 class="card-text">{{book.type}}</h6>
         <div class="lines-effect"></div>
@@ -13,3 +11,5 @@
         <a href="#" class="btn" [ngClass]="even ? 'bg-success' : 'bg-secondary' ">Comprar</a>
     </div>
 </div>
+
+
