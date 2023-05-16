@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
 })
 export class CardComponent {
 
-  @Input() book: Book;
-  @Output() titleBook = new EventEmitter <string>();
+//   @Input() book: Book;
+//   @Output() titleBook = new EventEmitter <string>();
 
-  enviarBook():void{
-  this.titleBook.emit(this.book.title)
+//   enviarBook():void{
+//   this.titleBook.emit(this.book.title)
 
-}
+// }
 }
 
