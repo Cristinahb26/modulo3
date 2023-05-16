@@ -28,4 +28,9 @@ export class BooksComponent {
 
       } 
 
+      borrarCard(titleBook:string):void{
+
+        this.books = this.books.filter(Book => Book.title != titleBook);
+      }
+
 }

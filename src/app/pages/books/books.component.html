@@ -1,17 +1,22 @@
 <main class="contenedor-tarjetas" *ngIf="books.length>0; else noHay">
  
-    <div class="tarjeta" style="width: 18rem;" *ngFor="let book of books; let even = even;">
-        <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
+    <!-- <div class="tarjeta" style="width: 18rem;" *ngFor="let book of books; let even = even;"> -->
+        <!-- <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
          <div class="card-body">
             <h6 class="card-text">{{book.type}}</h6>
             <div class="lines-effect"></div>
             <h5 class="card-title">{{book.title | uppercase}}</h5>
             <p class="card-subtitle">AUTOR: {{book.author | uppercase}}</p>
             <p>{{book.id_book | codigo}}</p>
-            <h4 class="Precio text-center">{{book.price}}€</h4>
-            <a href="#" class="btn" [ngClass]="even ? 'bg-success' : 'bg-secondary' ">Comprar</a>
-        </div>
-    </div>
+            <h4 class="Precio text-center">{{book.price}}€</h4> 
+            
+         </div> -->
+    <!-- </div> -->
+
+    <ng-container *ngFor="let book of books; let even = even;">
+        <!-- <a href="#" class="btn" [ngClass]="even ? 'bg-success' : 'bg-secondary' ">Comprar</a> -->
+        <app-card [book]="book" (titleBook) = "borrarCard($event)"></app-card>
+    </ng-container>
 
 </main>
 

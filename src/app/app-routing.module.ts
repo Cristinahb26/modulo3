@@ -6,6 +6,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
 
 const routes: Routes = [
+  {path: "", component: HomeComponent},
   {path: "home", component: HomeComponent},
   {path: "register", component: RegisterComponent},
   {path: "profile", component: ProfileComponent},
