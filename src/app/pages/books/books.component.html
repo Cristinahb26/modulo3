@@ -15,7 +15,7 @@
 
     <ng-container *ngFor="let book of books; let even = even;">
         <!-- <a href="#" class="btn" [ngClass]="even ? 'bg-success' : 'bg-secondary' ">Comprar</a> -->
-        <app-card [book]="book" (titleBook) = "borrarCard($event)"></app-card>
+        <app-card [book]="book" [even]="even" (titleBook) = "borrarCard($event)"></app-card>
     </ng-container>
 
 </main>

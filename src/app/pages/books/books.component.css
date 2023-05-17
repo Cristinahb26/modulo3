@@ -65,6 +65,16 @@ p{
     background-color: black;
 
 }
+h3{
+
+    height: 650px;
+    width: 1465px;
+    font-size: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 h4{
 
     font-size: 17px;
