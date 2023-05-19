@@ -12,6 +12,9 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
 import { CodigoPipe } from './pipes/codigo.pipe';
 import { FormsModule } from '@angular/forms';
+import { CardComponent } from './component/card/card.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,14 @@ import { FormsModule } from '@angular/forms';
     ProfileComponent,
     BooksComponent,
     CodigoPipe,
+    CardComponent,
+    UpdateBookComponent,
+    AddBookComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

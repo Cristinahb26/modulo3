@@ -13,8 +13,16 @@
          </div> -->
     <!-- </div> -->
 
+     <div class="container-fluid">
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="¿Que deseas buscar?" aria-label="Search">
+          <button class="btn btn-outline-success">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+
     <ng-container *ngFor="let book of books; let even = even;">
-        <!-- <a href="#" class="btn" [ngClass]="even ? 'bg-success' : 'bg-secondary' ">Comprar</a> -->
         <app-card [book]="book" [even]="even" (titleBook) = "borrarCard($event)"></app-card>
     </ng-container>
 
@@ -25,36 +33,6 @@
         <h3>No se encontro el Libro</h3>
     </div>
 </ng-template>
-
-<div class="formulario">
-
-    <form>
-
-            <div class="titulo">
-                <h2>Añadir Libro</h2>
-            </div>
-
-            <div class="formul">
-
-                <input type="text" class="form-control" id="title" placeholder="Titulo" #title>
-
-                <input type="text" class="form-control" id="type" placeholder="Tapa blanda/dura" #type>
-
-                <input type="text" class="form-control" id="author" placeholder="Autor" #author>
-
-                <input type="text" class="form-control" id="price" placeholder="Precio" #price>
-        
-                <input type="text" class="form-control" id="photo" placeholder="Photo" #photo>
-
-                <input type="text" class="form-control" id="id_book" placeholder="Codigo" #id_book>
-
-            </div>
-
-            <button type="reset" class="btn btn-success" (click)="agregarBook(title.value, type.value, author.value, price.value, photo.value, id_book.value)">Insertar Libro</button>
-
-    </form>
-</div>
-
 
       
       
