@@ -7,6 +7,7 @@ export class Book {
            public photo: string;
            public id_book:number=0;
            public  id_user:number =0;
+  id_libro: number;
 
        
     constructor(title: string, type: string, author: string, price: number, photo: string, id_book:number=0, id_user:number=0){

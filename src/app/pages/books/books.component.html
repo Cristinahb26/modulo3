@@ -13,17 +13,17 @@
          </div> -->
     <!-- </div> -->
 
-     <div class="container-fluid">
+     <div class="container">
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="¿Que deseas buscar?" aria-label="Search">
-          <button class="btn btn-outline-success">
+          <button class="btn btn-success">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </form>
       </div>
 
     <ng-container *ngFor="let book of books; let even = even;">
-        <app-card [book]="book" [even]="even" (titleBook) = "borrarCard($event)"></app-card>
+        <app-card [book]="book" [even]="even" (titleBook) = "delete($event)"></app-card>
     </ng-container>
 
 </main>

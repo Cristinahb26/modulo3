@@ -18,21 +18,30 @@ export class BooksService {
      
     ]
    }
-   
-   agregarBook(title:string, type:string, author:string, price:number, photo:string, id_book:number) {
-
-    let newBook = new Book(title, type, author, price, photo, id_book);
-    this.books.push(newBook);
-
-  }
-
    getAll(): Book[]{
       return this.books;
    }
-
+   
    getOne(id_book: number): Book {
+    return this.books.find(Book => Book.id_book == id_book);
+   }
+
+   agregarBook(newBook: Book) {
+
+    this.books.push(newBook);
+  }
+
+   edit(book:Book):Boolean{
+
+    for(let i=0; i < this.books.length; i++){
      
-    return this.books.find(Book => id_book === id_book);
+       if(this.books[i].id_book == book.id_book){
+          this.books[i]= book
+          return true;
+       }   
+    }
 
    }
-}
+
+   }
+ 

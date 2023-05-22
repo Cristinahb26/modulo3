@@ -2,9 +2,8 @@ main{
 
     /* height: 650px; */
     width: 1465px;
-    margin-top: 50px;
+    margin-top: 40px;
     margin-bottom: 50px;
-    
 
     display: flex;
     flex-direction: row;
@@ -101,13 +100,44 @@ a{
 }
 input{
 
-    width: 350px;
+    outline: none;
+    font-size: 18px;
+    width: 0px;
     height: 40px;
-    margin-left: 500px;
     border: 1px solid silver;
     border-radius: 30px;
-    padding: 0 20px;
+    /* padding: 0 20px; */
+    margin-bottom: 50px;
 
+}
+form{
+
+    width: 350px;
+    height: 40px;
+    position: absolute;
+    padding: 4px;
+    margin-left: 1000px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+   
+}
+.btn {
+
+    position:absolute;
+    width: 53px;
+    height: 53px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 50px;
+
+}
+form:hover input{
+
+    width: 350px;
 }
 
 

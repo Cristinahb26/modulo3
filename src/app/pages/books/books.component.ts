@@ -16,8 +16,21 @@ export class BooksComponent {
         this.books =this.bookService.getAll();
         
       } 
+  
+      getOne(id_book:number){
+        
+        if (id_book){
+          this.books = this.bookService.getAll();
 
-      borrarCard(titleBook:string):void{
+        }else{
+          
+         this.bookService.getOne(id_book);
+          
+        }
+
+      }
+
+      delete(titleBook:string):void{
 
         this.books = this.books.filter(Book => Book.title != titleBook);
       }

@@ -78,6 +78,7 @@ button{
     
     position: absolute;
     color: rgb(92, 90, 90);
+    background-color: rgb(193, 189, 189);
     margin-left: 250px;
     margin-top: 10px;
     opacity: 0;

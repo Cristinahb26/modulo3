@@ -10,12 +10,19 @@ import { BooksService } from 'src/app/shared/books.service';
 })
 export class AddBookComponent {
 
-   constructor(public bookService: BooksService, private router:Router){}
+  public books: Book[];
+
+  constructor(public bookService: BooksService, public router:Router) {
+  
+    this.books =this.bookService.getAll();
+    
+  } 
 
     agregarBook(title:string, type:string, author:string, price:number, photo:string, id_book:number): void{
 
-      this.bookService.agregarBook(new Book(title, type, author, price, photo, id_book));
-      this.router.navigate(['/book']);
+      let newBook = new Book(title, type, author, price, photo, id_book,0)
+      this.bookService.agregarBook(newBook);
+      this.router.navigate(['/books']);
     }
 
 }
