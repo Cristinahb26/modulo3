@@ -34,7 +34,6 @@ export class BooksService {
    edit(book:Book):Boolean{
 
     for(let i=0; i < this.books.length; i++){
-     
        if(this.books[i].id_book == book.id_book){
           this.books[i]= book
           return true;
@@ -45,12 +44,11 @@ export class BooksService {
    delete(id_book:number):Boolean{
 
     for (let i = 0; i < this.books.length; i++) {
-      if (this.books[i].id_book === id_book) {
+      if (this.books[i].id_book == id_book) {
         this.books.splice(i, 1);
-        return true;
+          return true;
       }
     }
   }
-
 }
  

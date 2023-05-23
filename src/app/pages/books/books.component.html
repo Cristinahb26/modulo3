@@ -15,15 +15,15 @@
 
      <div class="container">
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" id="search" placeholder="¿Que deseas buscar?" aria-label="Search" (keyup)="getOne(search_id_book)" #search_id_book>
-          <button class="btn btn-success" (click)="getOne(id_book)">
+          <input class="form-control me-2" type="search" id="search" placeholder="¿Que deseas buscar?" aria-label="Search" (keyup)="search(search_id_book)" #search_id_book>
+          <button class="btn btn-success" (click)="search(id_book)">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </form>
       </div>
 
     <ng-container *ngFor="let book of books; let even = even;">
-        <app-card [book]="book" [even]="even" (id_book) = "delete($event)"></app-card>
+        <app-card [book]="book" [even]="even" (titleBook) = "deleteCard($event)"></app-card>
     </ng-container>
 
 </main>
