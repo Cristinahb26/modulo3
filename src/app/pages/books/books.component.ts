@@ -23,16 +23,17 @@ export class BooksComponent {
           this.books = this.bookService.getAll();
 
         }else{
-          
-         this.bookService.getOne(id_book);
-          
-        }
 
+          this.books = [this.bookService.getOne(id_book)];
+           
+        }
       }
 
-      delete(titleBook:string):void{
+      delete(id_book:number):void{
 
-        this.books = this.books.filter(Book => Book.title != titleBook);
+        // this.books = this.books.filter(Book => Book.id_book !== id_book);
+        this.bookService.delete(id_book);
+
       }
 
 }

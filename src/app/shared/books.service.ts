@@ -42,6 +42,15 @@ export class BooksService {
     }
 
    }
+   delete(id_book:number):Boolean{
 
-   }
+    for (let i = 0; i < this.books.length; i++) {
+      if (this.books[i].id_book === id_book) {
+        this.books.splice(i, 1);
+        return true;
+      }
+    }
+  }
+
+}
  
