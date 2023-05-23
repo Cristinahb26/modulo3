@@ -17,7 +17,7 @@ export class BooksComponent {
         
       } 
   
-      search(id_book:number){
+      getOne(id_book:number){
         
         if (id_book){
           this.books = this.bookService.getAll();

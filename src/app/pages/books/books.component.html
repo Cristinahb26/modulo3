@@ -15,8 +15,8 @@
 
      <div class="container">
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" id="search" placeholder="¿Que deseas buscar?" aria-label="Search" (keyup)="search(search_id_book)" #search_id_book>
-          <button class="btn btn-success" (click)="search(id_book)">
+          <input class="form-control me-2" type="search" id="search" placeholder="¿Que deseas buscar?" aria-label="Search" (keyup)="getOne(search_id_book)" #search_id_book>
+          <button class="btn btn-success" (click)="getOne(id_book)">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
         </form>
