@@ -10,6 +10,7 @@ import { BooksService } from 'src/app/shared/books.service';
 export class BooksComponent {
 
       public books: Book[];
+  cards: any;
 
       constructor(public bookService: BooksService) {
       
@@ -20,15 +21,15 @@ export class BooksComponent {
       getOne(id_book:number){
         
         if (id_book){
-          this.books = this.bookService.getAll();
+          this.books = [this.bookService.getOne(id_book)];
 
         }else{
-          this.books = [this.bookService.getOne(id_book)];
+          this.books = this.bookService.getAll();
            
         }
       }
 
-      deleteCard(id_book:number){
-         this.bookService.delete(id_book);
+      delete(id_book:number):void{
+        this.bookService.delete(id_book);   
       }
 }

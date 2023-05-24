@@ -1,21 +1,8 @@
 <main class="contenedor-tarjetas" *ngIf="books.length>0; else noHay">
  
-    <!-- <div class="tarjeta" style="width: 18rem;" *ngFor="let book of books; let even = even;"> -->
-        <!-- <img src="{{book.photo}}" class="card-img-top" alt="imagen libro">
-         <div class="card-body">
-            <h6 class="card-text">{{book.type}}</h6>
-            <div class="lines-effect"></div>
-            <h5 class="card-title">{{book.title | uppercase}}</h5>
-            <p class="card-subtitle">AUTOR: {{book.author | uppercase}}</p>
-            <p>{{book.id_book | codigo}}</p>
-            <h4 class="Precio text-center">{{book.price}}€</h4> 
-            
-         </div> -->
-    <!-- </div> -->
-
      <div class="container">
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" id="search" placeholder="¿Que deseas buscar?" aria-label="Search" (keyup)="getOne(search_id_book)" #search_id_book>
+          <input class="form-control me-2" type="search" id="search" placeholder="¿Que deseas buscar?" aria-label="Search" (keyup)="getOne(search_id_book.value)" #search_id_book>
           <button class="btn btn-success" (click)="getOne(id_book)">
             <i class="fa fa-search" aria-hidden="true"></i>
           </button>
@@ -23,7 +10,7 @@
       </div>
 
     <ng-container *ngFor="let book of books; let even = even;">
-        <app-card [book]="book" [even]="even" (titleBook) = "deleteCard($event)"></app-card>
+        <app-card [book]="book" [even]="even" (titleBook) = "delete($event)"></app-card>
     </ng-container>
 
 </main>

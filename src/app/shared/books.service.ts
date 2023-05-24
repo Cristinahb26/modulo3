@@ -46,7 +46,7 @@ export class BooksService {
     for (let i = 0; i < this.books.length; i++) {
       if (this.books[i].id_book == id_book) {
         this.books.splice(i, 1);
-          return true;
+        return true;
       }
     }
   }
