@@ -1,0 +1,25 @@
+ <div class="main"> 
+   <form>
+        <img src="../../../assets/img/imgSesion.jpg">
+        <div class="row mb-3 datos">
+        
+                <input type="email" class="form-control" placeholder="Email" name="email" required>
+                <!-- #emailId="ngModel" [ngClass]="{ 'is-invalid': (emailId.dirty || emailId.touched) && emailId.invalid }"  -->
+                <!-- <div *ngIf = "(emailId.dirty || emailId.touched) && emailId.invalid" class="invalid-feedback">
+                      <div></div>
+                      <div></div>
+                </div> -->
+        </div>
+        <div class="row mb-3 datos">
+
+                 <input type="password" placeholder="Password" class="form-control" id="inputPassword3" required>
+
+        </div>
+        <button type="submit" class="btn btn-success">Iniciar sesión</button>
+        <div class="row mb-3">
+                <div class="col texto">
+                    <a href="#" style="color: grey" class="btn">¿Has olvidado tu contraseña?</a>
+                </div>
+       </div>
+    </form>
+</div>     
