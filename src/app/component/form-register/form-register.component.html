@@ -7,20 +7,30 @@
                         <div class="lines-effect"></div>
                     </div>
 
-                    <div class="formulario">
-                        <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                    <div class="formulario" [formGroup]="formRecord">
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre" formControlName="nombre"
+                        [ngClass]="{'is-invalid': (formRecord.get('nombre').dirty || formRecord.get('nombre').touched) && !formRecord.get('nombre').valid}">
+                        <div *ngIf="!formRecord.get('nombre').valid" class="invalid-feedback">El campo el obligatorio</div>
                     
-                        <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                        <input type="text" class="form-control" id="apellido" placeholder="Apellido" formControlName="apellido"
+                        [ngClass]="{'is-invalid': (formRecord.get('apellido').dirty || formRecord.get('apellido').touched) && !formRecord.get('apellido').valid}">
+                        <div *ngIf="!formRecord.get('apellido').valid" class="invalid-feedback">El campo es obligatorio</div>
                 
-                        <input type="email" class="form-control" id="email" placeholder="Email">
-
-                        <input type="url" class="form-control" id="url" placeholder="Url">
+                        <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email"
+                        [ngClass]="{'is-invalid': (formRecord.get('email').dirty || formRecord.get('email').touched) && !formRecord.get('email').valid}">
+                        <div *ngIf="!formRecord.get('email').valid" class="invalid-feedback">
+                              <div *ngIf="formRecord.get('email').errors.required">El campo es obligatorio</div>
+                              <div *ngIf="formRecord.get('email').errors.email">El Email es incorrecto</div>
+                        </div>
                 
-                        <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña" formControlName="password"
+                        [ngClass]="{'is-invalid': (formRecord.get('password').dirty || formRecord.get('password').touched) && !formRecord.get('password').valid}">
+                        <div *ngIf="!formRecord.get('password').valid" class="invalid-feedback">
+                              <div *ngIf="formRecord.get('password').errors.required">El Contraseña es obligatorio</div>
+                        </div>
 
-                        <input type="password" class="form-control" id="password2" placeholder="Repetir contraseña">
                     </div>
 
-                    <button type="submit" class="btn btn-success">Registrarse</button>
+                    <button type="reset" class="btn btn-success" (click)="register()" [disabled]="formRecord.invalid">Registrarse</button>
             </div>
       </form>

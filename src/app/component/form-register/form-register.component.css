@@ -46,23 +46,28 @@ h2{
 }
 .formulario{
 
-    height: 300px;
+    height: 250px;
     width: 80%;
     /* background-color: beige; */
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 10px;
 
 }
 input{
 
     background-color: rgb(240, 244, 244);
+
 }
 button:hover{
 
     background-color: rgb(32, 117, 245);
 
+}
+.invalid-feedback{
+
+    /* background-color: aqua; */
+    font-size: 12px;
 }

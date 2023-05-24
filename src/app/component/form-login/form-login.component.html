@@ -1,1 +1,34 @@
-<p>form-login works!</p>
+<div class="main"> 
+    <form [formGroup]="formulario">
+         <img src="../../../assets/img/imgSesion.jpg">
+         <div class="row mb-3 datos">
+         
+                 <input class="form-control" placeholder="Email" id="email" formControlName="email" 
+                 [ngClass]="{'is-invalid': formulario.get('email').invalid && (formulario.get('email').dirty || formulario.get('email').touched)}">
+                 <div *ngIf="!formulario.get('email').valid" class="invalid-feedback">
+                       <div *ngIf="formulario.get('email').errors.required">El campo es obligatorio</div>
+                       <div *ngIf="formulario.get('email').errors.email">El Email es incorrecto</div>
+                 </div>
+                 <!-- <div class="invalid-feedback" *ngIf="formulario.get('email').errors.required">El email es obligatorio</div> -->
+                 <!-- <div class="invalid-feedback" *ngIf="formulario.get('email').errors.email">El Email es incorrecto</div> -->
+         </div>
+         <div class="row mb-3 datos">
+ 
+                  <input type="password" class="form-control" placeholder="Password" id="inputPassword3" formControlName="password" 
+                  [ngClass]="{'is-invalid': formulario.get('password').invalid && (formulario.get('password').dirty || formulario.get('password').touched)}">
+                  <div *ngIf="!formulario.get('password').valid" class="invalid-feedback">
+                    <div *ngIf="formulario.get('password').errors.required">El Contraseña es obligatorio</div>
+                 </div>
+
+                  <!-- <div class="invalid-feedback" *ngIf="formulario.get('password').errors.required">La contraseña es obligatoria</div> -->
+                  <!-- <div class="invalid-feedback" *ngIf="formulario.get('password').errors.invalidPassword">La contraseña debe tener una letra mayuscula y un numero</div> -->
+         </div>
+         <button type="reset" class="btn btn-success" (click)=" onSubmit()" [disabled]="formulario.invalid" >Iniciar sesión</button>
+
+         <div class="row mb-3">
+                 <div class="col texto">
+                     <a href="#" style="color: grey" class="btn">¿Has olvidado tu contraseña?</a>
+                 </div>
+        </div>
+     </form>
+ </div>  
