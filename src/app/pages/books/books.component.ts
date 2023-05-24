@@ -10,7 +10,6 @@ import { BooksService } from 'src/app/shared/books.service';
 export class BooksComponent {
 
       public books: Book[];
-  cards: any;
 
       constructor(public bookService: BooksService) {
       
@@ -30,6 +29,8 @@ export class BooksComponent {
       }
 
       delete(id_book:number):void{
-        this.bookService.delete(id_book);   
+        this.bookService.delete(id_book);  
+        console.log(this.delete);
+         
       }
 }
