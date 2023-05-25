@@ -29,8 +29,11 @@ export class BooksComponent {
       }
 
       delete(id_book:number):void{
-        this.bookService.delete(id_book);  
-        console.log(this.delete);
-         
+        this.books.filter(Book => Book.id_book === id_book);
+
+          if (id_book) {
+          this.books.splice(id_book, 1);
+          this.bookService.delete(id_book);
       }
+   }
 }
